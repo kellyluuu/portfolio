@@ -356,6 +356,11 @@
 		font-size: 16px;
 		margin-bottom:5px;
 	}
+.iso-box {
+    min-width: 300px;
+
+}
+
 	.welcome-title:before,.welcome-title:after {
 		width: 100%;
 	}
@@ -423,5 +428,44 @@
 	}
 	.testimonial-content:before {
 		left: 43%;
+	}
+}
+
+
+/* Media Queries */
+@media screen and (max-width: 991px) {
+	.tm-gallery-content { padding-top: 150px; }
+	.tm-section-gallery { min-height: 900px; }
+	.tm-page-content-width,.tm-content-box { min-height: 1200px;	}
+}
+
+@media screen and (max-width: 767px) {
+	.tm-gallery-content { padding-top: 100px; }
+	.tm-content-box { padding: 100px 60px 100px; }
+	.tm-section-gallery { min-height: 1050px; }	
+	.tm-page-content-width,.tm-content-box { min-height: 1050px;	}
+	.tm-site-title-wrap {
+		padding-top: 60px;
+		padding-bottom: 60px;
+	}
+}
+
+@media screen and (max-height: 639px) {
+	.tm-section-home { min-height: 100%; }
+}
+
+@media screen and (max-width: 575px) {
+	.tm-gallery-content {padding-bottom: 150px;}	
+}
+
+@media screen and (max-width: 420px) {
+	.tm-media {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.tm-media-icon {
+		margin-right: 0;
+		margin-bottom: 30px;
 	}
 }

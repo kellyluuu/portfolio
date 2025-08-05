@@ -45,6 +45,7 @@ a:focus {
   outline: none;
   text-decoration: underline;
 }
+
 @media screen and (-ms-high-contrast:active), (-ms-high-contrast:none) {
   a:active {
     background-color: transparent;
@@ -91,10 +92,7 @@ h6 {
   margin-bottom: 10px;
   font-weight: 600;
 }
-#main {
-  padding: 0;
-  background: #fff;
-}
+
 .no-margin {
   margin: 0 !important;
 }
@@ -133,11 +131,17 @@ video {
   background: #222;
   opacity:0.95;
 }
+
 .section-inner {
   padding:20px 30px 0;
 }
+
+.portfolio {
+  padding: 20px;
+}
+
 .fp-scrollable {
-  height:calc(100vh - 200px) !important;
+  height:calc(100vh - 50px) !important;
 }
 #fp-nav ul li a span {
  display: none;
@@ -371,8 +375,8 @@ a#logo {
 }
 .navbar-nav li.active a {
   opacity: 1;
-  scale: 1.25;
-  color: rgb(204, 92, 224);
+  scale: 1;
+  color: #b060c4;
 }
 .collapse:not(.show) {
   display:block;
@@ -387,7 +391,7 @@ SOCIAL ICONS CSS
   top: 50%;
   transform: translateY(-50%);
   right:0;
-  z-index: 199;
+  z-index: 999;
 }
 .social-icons {
   margin:0;
@@ -429,6 +433,15 @@ SOCIAL ICONS CSS
 /*==============================================
 01. WELCOME BLOCK CSS
 ================================================*/
+
+@font-face {
+    font-family: Chalk;
+    src: url('/fonts/chalk.ttf');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap; 
+}
+
 .welcome-box {
   font-size:20px;
   line-height:1.7;
@@ -447,13 +460,14 @@ SOCIAL ICONS CSS
   color: #fff;
 }
 .welcome-title {
-  
-  font-weight: 700;
-  font-size: 120px;
-  font-family: Arial, Helvetica, sans-serif;
+  color: #b060c4;
+  font-weight: normal;
+  font-size: 20px;
+  font-family: Chalk, Arial;
   margin-bottom: 10px;
   letter-spacing:0.02em;
 }
+
 .welcome-title span {
   font-size:36px;
   display:block;
@@ -492,7 +506,7 @@ SOCIAL ICONS CSS
   border-radius: 70px;
   width: 50%;
   -webkit-box-shadow: 0 0 40px rgba(239, 238, 238, 0.1);
-  box-shadow: 12px 12px 20px rgba(240, 237, 237, 0.1);
+  box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.3);
 }
 .about-contentbox {
   margin-top: 80px;
@@ -523,8 +537,6 @@ SOCIAL ICONS CSS
   text-transform:capitalize;
   font-size:14px;
   padding: 4px;
-  background: rgba(0,0,0,0.5);
-
 }
 
 
@@ -534,11 +546,6 @@ SOCIAL ICONS CSS
 }
 
 
-.counter-icon {
-  font-size: 30px;
-  margin-bottom: 10px;
-  opacity: 0.75;
-}
 .facts-list .item:hover {
   background:#fff;
   color:#1e1e1e;
@@ -567,7 +574,7 @@ SOCIAL ICONS CSS
 }
 
 .title-block span {
-  font-size: 24px;
+  font-size: 18px;
   text-transform: uppercase;
   font-weight: 300;
 }
@@ -586,7 +593,7 @@ SOCIAL ICONS CSS
 
 .service-box {
   font-size:15px;
-  height:60%;
+  height:50%;
   padding: 0 10px 0 10px;  
 }
 
@@ -600,13 +607,14 @@ SOCIAL ICONS CSS
 .service-box h3 {
   font-size:22px;
   font-weight:700;
-  text-transform: capitalize;
+  text-transform: uppercase;
   margin-bottom: 10px;
   padding: 10px;
   
 }
 .service-box p:last-child {
   margin-top: 30px;
+  position:relative;
 }
 
 /*==============================================
@@ -614,7 +622,8 @@ SOCIAL ICONS CSS
 ================================================*/
 .iso-box {
     position: relative;
-    min-width: 300px;
+    /* min-width: 250px; */
+    min-height: 150px;
     float: left;
     overflow: hidden;
     margin-bottom: 15px;
@@ -622,9 +631,8 @@ SOCIAL ICONS CSS
     padding-right: 8px;
 }
 
-.iso-box img video {
+.iso-box img {
   width: 100%;
-  overflow: hidden;
   position: relative;
   z-index: 9;
 }
@@ -635,7 +643,7 @@ SOCIAL ICONS CSS
   bottom: 0;
   text-align: left;
   color: black;
-  background-color: rgba(250,250,250, .8);
+  background-color: rgba(250, 250, 250, 0.8);
   box-shadow: 5px 0px 10px white;
   width: 100%-16px;
   border-radius: 8px;
@@ -673,7 +681,7 @@ SOCIAL ICONS CSS
   color: black;
 }
 .iso-box:hover .thumb-inner h4 {
-  color: black;
+  color: #b060c4;
   margin-top: 8px;
   margin-bottom: 0px;
 }
@@ -696,20 +704,7 @@ SOCIAL ICONS CSS
   font-weight: 300;
 }
 
-.tm-content-box {
-	overflow: auto;
-	height: 100%;
-  min-height: 1150px;
-	max-width: 600px;
-	width:  100%;
-	padding: 180px 60px 100px;	
-	display: -ms-flexbox;	
-	display: -webkit-flex;	
-	display: flex;   
-	-webkit-flex-direction: column;   
-	-ms-flex-direction: column;   
-	flex-direction: column;
-  }
+
 
 
 
@@ -719,8 +714,41 @@ SOCIAL ICONS CSS
 	padding-left: 15px;
 	padding-right: 15px;
 	width: 100%;	
-  min-height: 1150px;
+  /* min-height: 1150px; */
 }
+
+.tm-section-gallery { min-height: 1100px; }
+.tm-flex { display: flex; }
+.tm-gallery-content { padding-top: 180px; }
+
+.tm-section {
+	background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.tm-flex-col {
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+    -ms-flex-direction: column;
+        -webkit-flex-direction: column;
+            flex-direction: column;    
+}
+
+.tm-media-icon {
+	margin-right: 30px;
+	margin-bottom: 0;
+}
+
+.tm-page-content-width {
+	max-width: 1300px;
+	margin: 0 auto;	
+	padding-left: 15px;
+	padding-right: 15px;
+	width: 100%;	
+}
+
 
 /*==============================================
 08. CONTACT BLOCK CSS
