@@ -13,10 +13,4 @@ Here's a short list of my skills:
 ![Kelly Luu's GitHub stats](https://github-readme-stats.vercel.app/api?username=Kellyluuu&show_icons=true&theme=nord&include_all_commits=true&count_private=true)
 
 
-![Kelly Luu's GitHub stats](https://github-readme-stats-kelly.vercel.app/api?username=kellyluuu&show_icons=true&theme=nord&include_all_commits=true&count_private=true&rank_icon=github&hide=stars,issues)
-
-
-
-![test](https://github-readme-stats-kelly.vercel.app/api/top-langs/?username=kellyluuu&size_weight=0.5&count_weight=0.5&langs_count=10&theme=nord&layout=compact&private=true&include_all_commits=true&card_width=400&hide=Cython,Procfile)
-
 [info@devkelly.com](mailto:info@devkelly.com)
